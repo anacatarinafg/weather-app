@@ -1,0 +1,355 @@
+main {
+}
+/* Article box that contains all the information that's on main ↓ */
+.information__box {
+
+}
+/* Div box that contains information about current weather & forecast ↓ */
+.top__box {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #282828;
+}
+.bottom__box {
+  display: flex;
+  flex-direction: column;
+}
+/* Section will be the commom dominator between all my four parameters that's on my main ↓ */
+section {
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 2rem;
+  gap: 15px;
+}
+
+/* 
+
+    CURRENT WEATHER
+
+*/
+.current__weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #282828;
+  gap: 15px;
+}
+.current__weather--title {
+}
+.current__weather--box {
+}
+.current__weather--timezone {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 1.5em;
+  border-bottom: 1px solid #282828;
+}
+.current__weather--span {
+}
+.current__weather--img {
+  align-self: center;
+}
+.current__weather--description {
+  align-self: center;
+}
+.current__weather--temperature {
+  align-self: end;
+  padding: 1.5em 1.5em;
+}
+
+/* 
+
+    FORECAST
+
+*/
+
+.forecast {
+
+}
+.forecast__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.forecast__box {
+  height: auto;
+  overflow-x: auto;
+}
+.forecast__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5em;
+
+}
+.forecast__item {
+  font-size: 16px;
+  padding: 1.5em 1.5em;
+  text-align: center;
+}
+.forecast__weekDay, .forecast__img, .forecast__temperature {
+  padding: 1em 1em;
+}
+.forecast__weekDay {
+
+}
+.forecast__img {
+  width: 100%;
+}
+.forecast__temperature {
+
+}
+
+
+/* 
+
+    HOURLY TEMPERATURE AND WIND
+
+*/
+
+.hourly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #282828;
+  gap: 15px;
+}
+.hourly__title {
+
+}
+.houly__box {
+
+}
+.hourly__headlines {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 1.5em;
+  border-bottom: 1px solid #282828; 
+}
+.hourly__span {
+  color: #9e9e9e;
+}
+.hourly__status {
+
+}
+.hourly__list {
+
+}
+.hourly__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 1.5em;
+}
+.hourly__item--span {
+
+}
+
+
+/* 
+
+    HIGHLIGHTS
+
+*/
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.highlights__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.highlights__headlines {
+  text-align: center;
+  padding: 1.5em 1.5em;
+  border-bottom: 1px solid #282828;
+}
+.highlights__span {
+
+}
+.highlights__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.highlights__list {
+
+}
+.highlights__list--twoItems {
+  display: flex;
+  justify-content: space-around;
+}
+.highlights__item {
+  padding: 0 1.5em 1.5em 1.5em;
+}
+.highlights__item--p {
+  text-align: center;
+}
+.highlights__img {
+  
+}
+.highlights__data {
+  text-align: center;
+}
+
+
+/* Div box that contains information about highlights/details & weather by hours ↓ */
+.bottom__box {
+}
+
+@media (min-width: 768px) {
+  .top__box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .bottom__box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .current__weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: calc(100% / 3.92);
+    border-right: 1px solid #282828;
+  }
+
+  /* 
+
+    FORECAST
+
+*/
+
+  .forecast {
+    gap: 15px;
+  }
+  .forecast__title {
+  }
+  .forecast__box {
+
+  }
+  .forecast__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .forecast__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    padding: 1.5em 1.5em;
+    gap: 20px;
+  }
+  .forecast__weekDay {
+    
+  }
+  .forecast__img {
+  }
+  .forecast__temperature {
+  }
+
+
+  /* 
+
+    HOURLY TEMPERATURE AND WIND
+
+*/
+
+.hourly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: calc(100% / 3.92);
+  border-right: 1px solid #282828;
+}
+.hourly__title {
+
+}
+.houly__box {
+  overflow-y: auto;
+}
+.hourly__headlines {
+
+}
+.hourly__span {
+
+}
+
+
+/* 
+
+    HIGHLIGHTS
+
+*/
+
+.highlights {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.highlights__title {
+  flex-basis: calc(100% / 1);
+  text-align: center;
+}
+.highlights__box {
+  width: 250px;
+}
+.highlights__box--twoItems {
+  width: 700px;
+}
+.highlights__headlines {
+  text-align: center;
+  padding: 1.5em 1.5em;
+  border-bottom: 1px solid #282828;
+}
+.highlights__span {
+
+}
+.highlights__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.highlights__list {
+
+}
+.highlights__list--twoItems {
+  display: flex;
+  justify-content: space-around;
+}
+.highlights__item {
+  padding: 0 1.5em 1.5em 1.5em;
+}
+.highlights__item--p {
+  text-align: center;
+}
+.highlights__img {
+  
+}
+.highlights__data {
+  text-align: center;
+}
+
+}

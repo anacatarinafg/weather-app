@@ -1,0 +1,253 @@
+:root {
+  /* COLORS */
+  --background-color: #181818;
+  --text-color: #FFFFFF;
+  --box-colors: #141414;
+
+    /* colors */
+    --primary: #b5a1e5;
+    --on-primary: #100e17;
+    --background: #131214;
+    --on-background: #eae6f2;
+    --surface: #1d1c1f;
+    --on-surface: #dddae5;
+    --on-surface-variant: #7b7980;
+    --on-surface-variant-2: #b9b6bf;
+    --outline: #3e3d40;
+    --bg-aqi-1: #89e589;
+    --on-bg-aqi-1: #1f331f;
+    --bg-aqi-2: #e5dd89;
+    --on-bg-aqi-2: #33311f;
+    --bg-aqi-3: #e5c089;
+    --on-bg-aqi-3: #332b1f;
+    --bg-aqi-4: #e58989;
+    --on-bg-aqi-4: #331f1f;
+    --bg-aqi-5: #e589b7;
+    --on-bg-aqi-5: #331f29;
+    --white: hsl(0, 0%, 100%);
+    --white-alpha-4: hsla(0, 0%, 100%, 0.04);
+    --white-alpha-8: hsla(0, 0%, 100%, 0.08);
+    --black-alpha-10: hsla(0, 0%, 0%, 0.1);
+
+  /* GRADIENT COLORS */
+
+  --first-gradient: linear-gradient(
+    162.47deg,
+    rgba(0, 119, 255, 0.133) 0%,
+    rgba(92, 26, 142, 0.263) 99.42%
+  );
+
+  /* LETTERS & SIZE & WEIGHT */
+  --ff: "Telka";
+  --heading: 54px;
+
+  /* BORDER RADIUS */
+  --radius-circle: 50%;
+  --radius-pill: 500px;
+  --radius-10: 10px;
+  --radius-16: 16px;
+  --radius-28: 28px;
+
+  /* SHADOWS */
+  --box-shadow: 0px 0px 1px 0.5px rgba(0, 0, 0, 0.25);
+
+  /* TRANSITIONS */
+  --transition-short: 100ms ease;
+}
+
+@font-face {
+  font-family: "Telka";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/TelkaTRIAL-Regular.otf) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: var(--ff);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--background-color);
+  background-size: cover;
+  color: var(--text-color);
+  width: 100%;
+  height: 100vh;
+  font-family: var(--ff);
+  font-size: 16px;
+}
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  height: auto;
+}
+input,
+button {
+  background-color: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  font: inherit;
+}
+input {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+a,
+img,
+input,
+button,
+span {
+  display: block;
+  color: var(--text-color);
+}
+sub {
+  vertical-align: baseline;
+}
+sup {
+  vertical-align: top;
+}
+sub,
+sup {
+  font-size: 12px;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #131214;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #131214;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #131214;
+}
+
+.icons {
+  font-size: 20px;
+  font-family: "Telka";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  height: 1em;
+  width: 1em;
+  overflow: hidden;
+}
+.icon__button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-circle);
+  background-color: transparent;
+  box-shadow: var(--box-shadow);
+}
+.has__state {
+  position: relative;
+}
+.has__state:hover {
+  box-shadow: var(--shadow-1);
+}
+.has__state:is(:focus, :focus-visible) {
+  box-shadow: none;
+}
+.has__state::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  clip-path: circle(100% at 50% 50%);
+  transition: var(--transition-short);
+}
+.has__state:hover::before {
+  background-color: var(--white-alpha-4);
+}
+.has__state:is(:focus, :focus-visible)::before {
+  background-color: var(--white-alpha-8);
+  animation: ripple 250ms ease forwards;
+}
+@keyframes ripple {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+/* We use this button on header and on 404 page */
+
+.current-location__link {
+  background-color: transparent;
+  color: var(--third-color);
+  height: 48px;
+  line-height: 48px;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-inline: 15px;
+  border-radius: var(--radius-pill);
+}
+.current-location__link[disabled] {
+  background-color: var(--outline);
+  color: var(--on-surface-variant);
+  cursor: not-allowed;
+}
+.current-location__link[disabled]::before {
+  display: none;
+}
+
+/* TITLES */
+
+.section__titles {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* BOXES */
+
+.box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--box-colors);
+  border-radius: 15px;
+}
