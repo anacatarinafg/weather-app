@@ -66,7 +66,12 @@ section {
 */
 
 .forecast {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #282828;
+  gap: 15px;
 }
 .forecast__title {
   display: flex;
@@ -155,8 +160,10 @@ section {
     HIGHLIGHTS
 
 */
-
 .highlights {
+
+}
+.highlights__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,6 +209,10 @@ section {
 }
 .highlights__data {
   text-align: center;
+}
+.highlights i {
+  font-size: 32px;
+  padding: .5em;
 }
 
 
@@ -304,14 +315,19 @@ section {
 
 .highlights {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .highlights__title {
   flex-basis: calc(100% / 1);
   text-align: center;
+}
+.highlights__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .highlights__box {
   width: 250px;
@@ -333,7 +349,6 @@ section {
   justify-content: center;
 }
 .highlights__list {
-
 }
 .highlights__list--twoItems {
   display: flex;
@@ -341,12 +356,14 @@ section {
 }
 .highlights__item {
   padding: 0 1.5em 1.5em 1.5em;
+  
 }
 .highlights__item--p {
   text-align: center;
 }
-.highlights__img {
-  
+.highlights i {
+  font-size: 52px;
+  padding: .5em;
 }
 .highlights__data {
   text-align: center;
