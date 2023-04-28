@@ -243,7 +243,6 @@ export const updateWeather = function (lat, lon) {
       fetchData(url.airPollution(lat, lon), function (airPollution) {
         const [
           {
-            main: { aqi },
             components: { no2, o3, so2, pm2_5 },
           },
         ] = airPollution.list;

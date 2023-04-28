@@ -1,5 +1,5 @@
 import { updateWeather } from "./results.js";
-const defaultLocation = "#/weather?lat=51.5073219&long=-0.1276474"; // London
+const defaultLocation = "#/weather?lat=51.5073219&long=-0.1276474";
 
 const currentLocation = function () {
   window.navigator.geolocation.getCurrentPosition(
@@ -17,11 +17,10 @@ const currentLocation = function () {
  * @param {string} query Searched query
  */
 const searchedLocation = (query) => updateWeather(...query.split("&"));
-// updateWeather("lat=51.5073219", "long=-0.1276474")
 
 const routes = new Map([
-  ["/current-location", currentLocation],
-  ["/weather", searchedLocation],
+  ["./current-location", currentLocation],
+  ["./weather", searchedLocation],
 ]);
 
 const checkHash = function () {
