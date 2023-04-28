@@ -125,7 +125,7 @@ export const updateWeather = function (lat, lon) {
     )}</span>
       </div>
     <img
-      src="/images/weather_icons/${icon}.png"
+      src="./images/weather_icons/${icon}.png"
       alt="${description}"
       class="current__weather--img"
     />
@@ -225,7 +225,7 @@ export const updateWeather = function (lat, lon) {
           }</span>
       <div class="forecast__imageTemperature">
       <img
-        src="/images/weather_icons/${icon}.png"
+        src="./images/weather_icons/${icon}.png"
         alt="${description}"
         class="forecast__img"
       />
