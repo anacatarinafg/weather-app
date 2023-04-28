@@ -119,7 +119,7 @@ export const updateWeather = function (lat, lon) {
     box.innerHTML = `
       <div class="current__weather--timezone">
         <span class="current__weather--span" data-location></span>
-        <span class="current__weather--span">${module.getHours(
+        <span class="current__weather--span">${module.getDate(
       dateUnix,
       timezone
     )}</span>

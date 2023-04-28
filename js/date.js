@@ -33,7 +33,7 @@ export const getDate = function (dateUnix, timezone) {
   const date = new Date((dateUnix + timezone) * 1000);
   const weekday = weekdays[date.getUTCDay()];
   const month = months[date.getUTCMonth()];
-  return `${weekday}, ${date.getUTCDate()}, ${month}}`;
+  return `${weekday}, ${date.getUTCDate()}, ${month}`;
 };
 
 /**
